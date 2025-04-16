@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="script.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock, Paper, Scissors</title>\
-    <script src="script.js"></script> 
+    <title>Rock, Paper, Scissors</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100vh;
+        margin: 0; /* Remove browser default margins */
+        background-color: #f9f9f9; /* Light background color */
+      }
 
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      #results {
+        font-size: 20px;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        border: 2px solid #007bff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        background-color: #f0f8ff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin-top: 20px; /* Adds spacing below buttons */
+      }
+
+      #results h2 {
+        font-size: 24px;
+        color: #007bff;
+        margin-bottom: 15px;
+      }
+
+      #results p {
+        margin: 8px 0;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
+    <h1><button id="rock">Rock</button></h1>
+    <h1><button id="paper">Paper</button></h1>
+    <h1><button id="scissor">Scissors</button></h1>
+    <div id="results">
+      <h2>Game Results</h2>
+    </div>
   </body>
 </html>
